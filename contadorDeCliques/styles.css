@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  text-align: center;
+  flex-direction: column;
+}
+
+.counter {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 12px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  transition: all 0.3s ease; /* Adicionando transição para os botões */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras sutis nos botões */
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Cor mais escura no hover */
+  transform: translateY(-2px); /* Efeito de elevação */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra no hover */
+}
+
+.reset {
+  background-color: #FF5733; /* Cor diferenciada para o botão de reiniciar */
+}
+
+.reset:hover {
+  background-color: #e04e2b; /* Cor mais escura quando hover no botão de reiniciar */
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}

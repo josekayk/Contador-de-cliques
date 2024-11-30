@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Cliques</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+
+  <div class="title">Contador de Cliques</div>
+  
+  <div>
+    <div id="counter" class="counter">0</div>
+    <button id="increment" class="button">Incrementar</button>
+    <button id="decrement" class="button">Decrementar</button>
+    <button id="reset" class="button reset">Reiniciar</button> <!-- Novo botão com classe diferenciada -->
+  </div>
+
+  <script>
+    let counterValue = 0;
+    const counterElement = document.getElementById('counter');
+
+    // Função para atualizar a cor do número com base no valor
+    function updateCounterColor() {
+      if (counterValue > 0) {
+        counterElement.style.color = 'green'; // Verde para números positivos
+      } else if (counterValue < 0) {
+        counterElement.style.color = 'red'; // Vermelho para números negativos
+      } else {
+        counterElement.style.color = 'black'; // Preto para zero
+      }
+    }
+
+    // Função para incrementar o contador
+    document.getElementById('increment').addEventListener('click', () => {
+      counterValue++;
+      counterElement.textContent = counterValue;
+      updateCounterColor();
+    });
+
+    // Função para decrementar o contador
+    document.getElementById('decrement').addEventListener('click', () => {
+      counterValue--;
+      counterElement.textContent = counterValue;
+      updateCounterColor();
+    });
+
+    // Função para reiniciar o contador
+    document.getElementById('reset').addEventListener('click', () => {
+      counterValue = 0;
+      counterElement.textContent = counterValue;
+      updateCounterColor();
+    });
+
+    // Atualiza a cor inicial
+    updateCounterColor();
+  </script>
+
+</body>
+</html>
